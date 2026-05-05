@@ -1,0 +1,120 @@
+running build_ext
+/home/test/Yankai-L/miniconda3/envs/r2_gaussianfast/lib/python3.9/site-packages/torch/utils/cpp_extension.py:425: UserWarning: There are no g++ version bounds defined for CUDA version 11.8
+  warnings.warn(f'There are no {compiler_name} version bounds defined for CUDA version {cuda_str_version}')
+building 'xray_gaussian_rasterization_voxelization._C' extension
+Emitting ninja build file /home/test/R2_GS/r2_gaussian_fastCUDA/r2_gaussian/submodules/xray-gaussian-rasterization-voxelization/build/temp.linux-x86_64-cpython-39/build.ninja...
+Compiling objects...
+Allowing ninja to set a default number of workers... (overridable by setting the environment variable MAX_JOBS=N)
+[1/1] /home/test/Yankai-L/miniconda3/envs/r2_gaussianfast/bin/nvcc --generate-dependencies-with-compile --dependency-output /home/test/R2_GS/r2_gaussian_fastCUDA/r2_gaussian/submodules/xray-gaussian-rasterization-voxelization/build/temp.linux-x86_64-cpython-39/cuda_rasterizer/rasterizer_impl.o.d -I/home/test/Yankai-L/miniconda3/envs/r2_gaussianfast/lib/python3.9/site-packages/torch/include -I/home/test/Yankai-L/miniconda3/envs/r2_gaussianfast/lib/python3.9/site-packages/torch/include/torch/csrc/api/include -I/home/test/Yankai-L/miniconda3/envs/r2_gaussianfast/lib/python3.9/site-packages/torch/include/TH -I/home/test/Yankai-L/miniconda3/envs/r2_gaussianfast/lib/python3.9/site-packages/torch/include/THC -I/home/test/Yankai-L/miniconda3/envs/r2_gaussianfast/include -I/home/test/Yankai-L/miniconda3/envs/r2_gaussianfast/include/python3.9 -c -c /home/test/R2_GS/r2_gaussian_fastCUDA/r2_gaussian/submodules/xray-gaussian-rasterization-voxelization/cuda_rasterizer/rasterizer_impl.cu -o /home/test/R2_GS/r2_gaussian_fastCUDA/r2_gaussian/submodules/xray-gaussian-rasterization-voxelization/build/temp.linux-x86_64-cpython-39/cuda_rasterizer/rasterizer_impl.o -D__CUDA_NO_HALF_OPERATORS__ -D__CUDA_NO_HALF_CONVERSIONS__ -D__CUDA_NO_BFLOAT16_CONVERSIONS__ -D__CUDA_NO_HALF2_OPERATORS__ --expt-relaxed-constexpr --compiler-options ''"'"'-fPIC'"'"'' -I/home/test/R2_GS/r2_gaussian_fastCUDA/r2_gaussian/submodules/xray-gaussian-rasterization-voxelization/third_party/glm/ -DTORCH_API_INCLUDE_EXTENSION_H '-DPYBIND11_COMPILER_TYPE="_gcc"' '-DPYBIND11_STDLIB="_libstdcpp"' '-DPYBIND11_BUILD_ABI="_cxxabi1011"' -DTORCH_EXTENSION_NAME=_C -D_GLIBCXX_USE_CXX11_ABI=0 -gencode=arch=compute_75,code=compute_75 -gencode=arch=compute_75,code=sm_75 -std=c++17
+FAILED: [code=1] /home/test/R2_GS/r2_gaussian_fastCUDA/r2_gaussian/submodules/xray-gaussian-rasterization-voxelization/build/temp.linux-x86_64-cpython-39/cuda_rasterizer/rasterizer_impl.o 
+/home/test/Yankai-L/miniconda3/envs/r2_gaussianfast/bin/nvcc --generate-dependencies-with-compile --dependency-output /home/test/R2_GS/r2_gaussian_fastCUDA/r2_gaussian/submodules/xray-gaussian-rasterization-voxelization/build/temp.linux-x86_64-cpython-39/cuda_rasterizer/rasterizer_impl.o.d -I/home/test/Yankai-L/miniconda3/envs/r2_gaussianfast/lib/python3.9/site-packages/torch/include -I/home/test/Yankai-L/miniconda3/envs/r2_gaussianfast/lib/python3.9/site-packages/torch/include/torch/csrc/api/include -I/home/test/Yankai-L/miniconda3/envs/r2_gaussianfast/lib/python3.9/site-packages/torch/include/TH -I/home/test/Yankai-L/miniconda3/envs/r2_gaussianfast/lib/python3.9/site-packages/torch/include/THC -I/home/test/Yankai-L/miniconda3/envs/r2_gaussianfast/include -I/home/test/Yankai-L/miniconda3/envs/r2_gaussianfast/include/python3.9 -c -c /home/test/R2_GS/r2_gaussian_fastCUDA/r2_gaussian/submodules/xray-gaussian-rasterization-voxelization/cuda_rasterizer/rasterizer_impl.cu -o /home/test/R2_GS/r2_gaussian_fastCUDA/r2_gaussian/submodules/xray-gaussian-rasterization-voxelization/build/temp.linux-x86_64-cpython-39/cuda_rasterizer/rasterizer_impl.o -D__CUDA_NO_HALF_OPERATORS__ -D__CUDA_NO_HALF_CONVERSIONS__ -D__CUDA_NO_BFLOAT16_CONVERSIONS__ -D__CUDA_NO_HALF2_OPERATORS__ --expt-relaxed-constexpr --compiler-options ''"'"'-fPIC'"'"'' -I/home/test/R2_GS/r2_gaussian_fastCUDA/r2_gaussian/submodules/xray-gaussian-rasterization-voxelization/third_party/glm/ -DTORCH_API_INCLUDE_EXTENSION_H '-DPYBIND11_COMPILER_TYPE="_gcc"' '-DPYBIND11_STDLIB="_libstdcpp"' '-DPYBIND11_BUILD_ABI="_cxxabi1011"' -DTORCH_EXTENSION_NAME=_C -D_GLIBCXX_USE_CXX11_ABI=0 -gencode=arch=compute_75,code=compute_75 -gencode=arch=compute_75,code=sm_75 -std=c++17
+/home/test/R2_GS/r2_gaussian_fastCUDA/r2_gaussian/submodules/xray-gaussian-rasterization-voxelization/third_party/glm/glm/./ext/../detail/type_vec2.hpp(101): warning #20012-D: __device__ annotation is ignored on a function("vec") that is explicitly defaulted on its first declaration
+
+/home/test/R2_GS/r2_gaussian_fastCUDA/r2_gaussian/submodules/xray-gaussian-rasterization-voxelization/third_party/glm/glm/./ext/../detail/type_vec2.hpp(101): warning #20012-D: __host__ annotation is ignored on a function("vec") that is explicitly defaulted on its first declaration
+
+/home/test/R2_GS/r2_gaussian_fastCUDA/r2_gaussian/submodules/xray-gaussian-rasterization-voxelization/third_party/glm/glm/./ext/../detail/type_vec3.hpp(107): warning #20012-D: __device__ annotation is ignored on a function("vec") that is explicitly defaulted on its first declaration
+
+/home/test/R2_GS/r2_gaussian_fastCUDA/r2_gaussian/submodules/xray-gaussian-rasterization-voxelization/third_party/glm/glm/./ext/../detail/type_vec3.hpp(107): warning #20012-D: __host__ annotation is ignored on a function("vec") that is explicitly defaulted on its first declaration
+
+/home/test/R2_GS/r2_gaussian_fastCUDA/r2_gaussian/submodules/xray-gaussian-rasterization-voxelization/third_party/glm/glm/./ext/../detail/type_vec4.hpp(105): warning #20012-D: __device__ annotation is ignored on a function("vec") that is explicitly defaulted on its first declaration
+
+/home/test/R2_GS/r2_gaussian_fastCUDA/r2_gaussian/submodules/xray-gaussian-rasterization-voxelization/third_party/glm/glm/./ext/../detail/type_vec4.hpp(105): warning #20012-D: __host__ annotation is ignored on a function("vec") that is explicitly defaulted on its first declaration
+
+/home/test/R2_GS/r2_gaussian_fastCUDA/r2_gaussian/submodules/xray-gaussian-rasterization-voxelization/third_party/glm/glm/./ext/../detail/type_mat2x2.hpp(35): warning #20012-D: __device__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+
+/home/test/R2_GS/r2_gaussian_fastCUDA/r2_gaussian/submodules/xray-gaussian-rasterization-voxelization/third_party/glm/glm/./ext/../detail/type_mat2x2.hpp(35): warning #20012-D: __host__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+
+/home/test/R2_GS/r2_gaussian_fastCUDA/r2_gaussian/submodules/xray-gaussian-rasterization-voxelization/third_party/glm/glm/./ext/../detail/.././ext/../detail/type_mat2x3.hpp(36): warning #20012-D: __device__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+
+/home/test/R2_GS/r2_gaussian_fastCUDA/r2_gaussian/submodules/xray-gaussian-rasterization-voxelization/third_party/glm/glm/./ext/../detail/.././ext/../detail/type_mat2x3.hpp(36): warning #20012-D: __host__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+
+/home/test/R2_GS/r2_gaussian_fastCUDA/r2_gaussian/submodules/xray-gaussian-rasterization-voxelization/third_party/glm/glm/./ext/../detail/.././ext/../detail/type_mat2x4.hpp(36): warning #20012-D: __device__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+
+/home/test/R2_GS/r2_gaussian_fastCUDA/r2_gaussian/submodules/xray-gaussian-rasterization-voxelization/third_party/glm/glm/./ext/../detail/.././ext/../detail/type_mat2x4.hpp(36): warning #20012-D: __host__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+
+/home/test/R2_GS/r2_gaussian_fastCUDA/r2_gaussian/submodules/xray-gaussian-rasterization-voxelization/third_party/glm/glm/./ext/../detail/.././ext/../detail/type_mat3x2.hpp(36): warning #20012-D: __device__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+
+/home/test/R2_GS/r2_gaussian_fastCUDA/r2_gaussian/submodules/xray-gaussian-rasterization-voxelization/third_party/glm/glm/./ext/../detail/.././ext/../detail/type_mat3x2.hpp(36): warning #20012-D: __host__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+
+/home/test/R2_GS/r2_gaussian_fastCUDA/r2_gaussian/submodules/xray-gaussian-rasterization-voxelization/third_party/glm/glm/./ext/../detail/.././ext/../detail/type_mat3x3.hpp(35): warning #20012-D: __device__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+
+/home/test/R2_GS/r2_gaussian_fastCUDA/r2_gaussian/submodules/xray-gaussian-rasterization-voxelization/third_party/glm/glm/./ext/../detail/.././ext/../detail/type_mat3x3.hpp(35): warning #20012-D: __host__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+
+/home/test/R2_GS/r2_gaussian_fastCUDA/r2_gaussian/submodules/xray-gaussian-rasterization-voxelization/third_party/glm/glm/./ext/../detail/.././ext/../detail/../detail/type_vec1.hpp(95): warning #20012-D: __device__ annotation is ignored on a function("vec") that is explicitly defaulted on its first declaration
+
+/home/test/R2_GS/r2_gaussian_fastCUDA/r2_gaussian/submodules/xray-gaussian-rasterization-voxelization/third_party/glm/glm/./ext/../detail/.././ext/../detail/../detail/type_vec1.hpp(95): warning #20012-D: __host__ annotation is ignored on a function("vec") that is explicitly defaulted on its first declaration
+
+/home/test/R2_GS/r2_gaussian_fastCUDA/r2_gaussian/submodules/xray-gaussian-rasterization-voxelization/third_party/glm/glm/./ext/../detail/.././ext/../detail/type_mat3x4.hpp(36): warning #20012-D: __device__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+
+/home/test/R2_GS/r2_gaussian_fastCUDA/r2_gaussian/submodules/xray-gaussian-rasterization-voxelization/third_party/glm/glm/./ext/../detail/.././ext/../detail/type_mat3x4.hpp(36): warning #20012-D: __host__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+
+/home/test/R2_GS/r2_gaussian_fastCUDA/r2_gaussian/submodules/xray-gaussian-rasterization-voxelization/third_party/glm/glm/./ext/../detail/.././ext/../detail/type_mat4x2.hpp(36): warning #20012-D: __device__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+
+/home/test/R2_GS/r2_gaussian_fastCUDA/r2_gaussian/submodules/xray-gaussian-rasterization-voxelization/third_party/glm/glm/./ext/../detail/.././ext/../detail/type_mat4x2.hpp(36): warning #20012-D: __host__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+
+/home/test/R2_GS/r2_gaussian_fastCUDA/r2_gaussian/submodules/xray-gaussian-rasterization-voxelization/third_party/glm/glm/./ext/../detail/.././ext/../detail/type_mat4x3.hpp(36): warning #20012-D: __device__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+
+/home/test/R2_GS/r2_gaussian_fastCUDA/r2_gaussian/submodules/xray-gaussian-rasterization-voxelization/third_party/glm/glm/./ext/../detail/.././ext/../detail/type_mat4x3.hpp(36): warning #20012-D: __host__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+
+/home/test/R2_GS/r2_gaussian_fastCUDA/r2_gaussian/submodules/xray-gaussian-rasterization-voxelization/third_party/glm/glm/./ext/../detail/.././ext/../detail/type_mat4x4.hpp(35): warning #20012-D: __device__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+
+/home/test/R2_GS/r2_gaussian_fastCUDA/r2_gaussian/submodules/xray-gaussian-rasterization-voxelization/third_party/glm/glm/./ext/../detail/.././ext/../detail/type_mat4x4.hpp(35): warning #20012-D: __host__ annotation is ignored on a function("mat") that is explicitly defaulted on its first declaration
+
+/home/test/R2_GS/r2_gaussian_fastCUDA/r2_gaussian/submodules/xray-gaussian-rasterization-voxelization/cuda_rasterizer/auxiliary.h(155): warning #177-D: variable "p_proj" was declared but never referenced
+
+/home/test/R2_GS/r2_gaussian_fastCUDA/r2_gaussian/submodules/xray-gaussian-rasterization-voxelization/cuda_rasterizer/rasterizer_impl.cu(196): error: declaration is incompatible with "int CudaRasterizer::Rasterizer::forward(std::function<char *(size_t)>, std::function<char *(size_t)>, std::function<char *(size_t)>, int, int, int, const float *, const float *, const float *, float, const float *, const float *, const float *, const float *, const float *, float, float, __nv_bool, int, float *, int *, __nv_bool)"
+/home/test/R2_GS/r2_gaussian_fastCUDA/r2_gaussian/submodules/xray-gaussian-rasterization-voxelization/cuda_rasterizer/rasterizer.h(36): here
+
+/home/test/R2_GS/r2_gaussian_fastCUDA/r2_gaussian/submodules/xray-gaussian-rasterization-voxelization/cuda_rasterizer/rasterizer_impl.cu(298): error: expected a ";"
+
+2 errors detected in the compilation of "/home/test/R2_GS/r2_gaussian_fastCUDA/r2_gaussian/submodules/xray-gaussian-rasterization-voxelization/cuda_rasterizer/rasterizer_impl.cu".
+ninja: build stopped: subcommand failed.
+Traceback (most recent call last):
+  File "/home/test/Yankai-L/miniconda3/envs/r2_gaussianfast/lib/python3.9/site-packages/torch/utils/cpp_extension.py", line 2096, in _run_ninja_build
+    subprocess.run(
+  File "/home/test/Yankai-L/miniconda3/envs/r2_gaussianfast/lib/python3.9/subprocess.py", line 528, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['ninja', '-v']' returned non-zero exit status 1.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/test/R2_GS/r2_gaussian_fastCUDA/r2_gaussian/submodules/xray-gaussian-rasterization-voxelization/setup.py", line 18, in <module>
+    setup(
+  File "/home/test/Yankai-L/miniconda3/envs/r2_gaussianfast/lib/python3.9/site-packages/setuptools/__init__.py", line 115, in setup
+    return distutils.core.setup(**attrs)
+  File "/home/test/Yankai-L/miniconda3/envs/r2_gaussianfast/lib/python3.9/site-packages/setuptools/_distutils/core.py", line 186, in setup
+    return run_commands(dist)
+  File "/home/test/Yankai-L/miniconda3/envs/r2_gaussianfast/lib/python3.9/site-packages/setuptools/_distutils/core.py", line 202, in run_commands
+    dist.run_commands()
+  File "/home/test/Yankai-L/miniconda3/envs/r2_gaussianfast/lib/python3.9/site-packages/setuptools/_distutils/dist.py", line 1002, in run_commands
+    self.run_command(cmd)
+  File "/home/test/Yankai-L/miniconda3/envs/r2_gaussianfast/lib/python3.9/site-packages/setuptools/dist.py", line 1102, in run_command
+    super().run_command(command)
+  File "/home/test/Yankai-L/miniconda3/envs/r2_gaussianfast/lib/python3.9/site-packages/setuptools/_distutils/dist.py", line 1021, in run_command
+    cmd_obj.run()
+  File "/home/test/Yankai-L/miniconda3/envs/r2_gaussianfast/lib/python3.9/site-packages/setuptools/command/build_ext.py", line 96, in run
+    _build_ext.run(self)
+  File "/home/test/Yankai-L/miniconda3/envs/r2_gaussianfast/lib/python3.9/site-packages/Cython/Distutils/old_build_ext.py", line 186, in run
+    _build_ext.build_ext.run(self)
+  File "/home/test/Yankai-L/miniconda3/envs/r2_gaussianfast/lib/python3.9/site-packages/setuptools/_distutils/command/build_ext.py", line 368, in run
+    self.build_extensions()
+  File "/home/test/Yankai-L/miniconda3/envs/r2_gaussianfast/lib/python3.9/site-packages/torch/utils/cpp_extension.py", line 871, in build_extensions
+    build_ext.build_extensions(self)
+  File "/home/test/Yankai-L/miniconda3/envs/r2_gaussianfast/lib/python3.9/site-packages/Cython/Distutils/old_build_ext.py", line 195, in build_extensions
+    _build_ext.build_ext.build_extensions(self)
+  File "/home/test/Yankai-L/miniconda3/envs/r2_gaussianfast/lib/python3.9/site-packages/setuptools/_distutils/command/build_ext.py", line 484, in build_extensions
+    self._build_extensions_serial()
+  File "/home/test/Yankai-L/miniconda3/envs/r2_gaussianfast/lib/python3.9/site-packages/setuptools/_distutils/command/build_ext.py", line 510, in _build_extensions_serial
+    self.build_extension(ext)
+  File "/home/test/Yankai-L/miniconda3/envs/r2_gaussianfast/lib/python3.9/site-packages/setuptools/command/build_ext.py", line 261, in build_extension
+    _build_ext.build_extension(self, ext)
+  File "/home/test/Yankai-L/miniconda3/envs/r2_gaussianfast/lib/python3.9/site-packages/setuptools/_distutils/command/build_ext.py", line 565, in build_extension
+    objects = self.compiler.compile(
+  File "/home/test/Yankai-L/miniconda3/envs/r2_gaussianfast/lib/python3.9/site-packages/torch/utils/cpp_extension.py", line 684, in unix_wrap_ninja_compile
+    _write_ninja_file_and_compile_objects(
+  File "/home/test/Yankai-L/miniconda3/envs/r2_gaussianfast/lib/python3.9/site-packages/torch/utils/cpp_extension.py", line 1774, in _write_ninja_file_and_compile_objects
+    _run_ninja_build(
+  File "/home/test/Yankai-L/miniconda3/envs/r2_gaussianfast/lib/python3.9/site-packages/torch/utils/cpp_extension.py", line 2112, in _run_ninja_build
+    raise RuntimeError(message) from e
+RuntimeError: Error compiling objects for extension
