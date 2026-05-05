@@ -154,14 +154,11 @@ def render(
     )
     # Those Gaussians that were frustum culled or had a radius of 0 were not visible.
     # They will be excluded from value updates used in the splitting criteria.
-    result = {
+    return {
         "render": rendered_image,
         "viewspace_points": screenspace_points,
         "visibility_filter": radii > 0,
         "radii": radii,
+        "gaussian_resp": gaussian_resp,
+        "gaussian_cnt": gaussian_cnt,
     }
-    # 只在真正传入 pixel_error_map 时才携带统计结果（节省显存）
-    if pixel_error_map is not None:
-        result["gaussian_resp"] = gaussian_resp
-        result["gaussian_cnt"]  = gaussian_cnt
-    return result
