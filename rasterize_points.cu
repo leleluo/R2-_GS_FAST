@@ -59,25 +59,13 @@ RasterizeGaussiansCUDA(
   torch::Tensor out_color = torch::full({NUM_CHANNELS, H, W}, 0.0, float_opts);
   torch::Tensor radii = torch::full({P}, 0, int_opts);
 
+  // ===== 输出：责任 + 高误差像素计数 =====
+  torch::Tensor gaussian_responsibility = torch::zeros({P}, float_opts);
+  torch::Tensor gaussian_err_count      = torch::zeros({P}, float_opts);
+
   // ===== 输入：pixel_error_map（来自 Python，可为空）=====
   const float* pixel_ptr = nullptr;
   bool use_error_map = (pixel_error_map.defined() && pixel_error_map.numel() > 0);
-
-  // ===== 输出：责任 + 高误差像素计数（只在有 pixel_error_map 时才分配，节省显存）=====
-  torch::Tensor gaussian_responsibility;
-  torch::Tensor gaussian_err_count;
-  float* resp_ptr = nullptr;
-  float* cnt_ptr  = nullptr;
-  if (use_error_map) {
-    gaussian_responsibility = torch::zeros({P}, float_opts);
-    gaussian_err_count      = torch::zeros({P}, float_opts);
-    resp_ptr = gaussian_responsibility.contiguous().data_ptr<float>();
-    cnt_ptr  = gaussian_err_count.contiguous().data_ptr<float>();
-  } else {
-    // 返回空 tensor，不占显存
-    gaussian_responsibility = torch::zeros({0}, float_opts);
-    gaussian_err_count      = torch::zeros({0}, float_opts);
-  }
 
   torch::Tensor pem; // 用于保证 contiguous / reshape 后的 tensor 生命周期
   if (use_error_map) {
@@ -190,9 +178,9 @@ RasterizeGaussiansCUDA(
         tan_fovy,
         prefiltered,
         mode,
-        pixel_ptr,   // 可能为 nullptr
-        resp_ptr,    // 无 pixel_error_map 时为 nullptr，节省显存
-        cnt_ptr,     // 同上
+        pixel_ptr,                                       // ★ 可能为 nullptr
+        gaussian_responsibility.contiguous().data_ptr<float>(),
+        gaussian_err_count.contiguous().data_ptr<float>(), // ★ 新增：count 输出
         out_color.contiguous().data_ptr<float>(),
         radii.contiguous().data_ptr<int>(),
         debug
